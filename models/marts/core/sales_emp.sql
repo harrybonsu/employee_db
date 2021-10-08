@@ -1,7 +1,3 @@
-{{ config(
-    materialized="table"
-)}}
-
 with employees as (
 
   select * from {{ ref('stg_employees')}}
