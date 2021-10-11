@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_employees
+    columns:
+      - name: employee_number
+        tests:
+          - unique
+          - not_null
+  - name: stg_departments
+    columns:
+      - name: department_name
+        tests:
+          - accepted_values:
+              values: ['Marketing', 'finance', 'Human_Resources', 'Production', 'Development', 'Quality_Management', 'Research', 'Customer_Service', 'Sales']
+            
