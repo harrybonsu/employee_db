@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_employees
+    columns:
+      - name: employee_number
+        tests:
+          - unique
+          - not_null
+  - name: stg_departments
+    columns:
+      - name: department_number
+        tests:
+          - accepted_values:
+              values: 
+                - d001
+                - d002
+                - d003
+                - d004
+                - d005
+                - d006
+                - d007
+                - d008
+                - d009
+  - name: stg_salaries
+    columns:
+      - name: salary
+        tests:
+          - not_null
+ 

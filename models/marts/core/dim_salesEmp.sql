@@ -13,15 +13,22 @@ departments as (
   select * from {{ ref('stg_departments') }}
 ),
 
+salaries as (
+  select * from {{ ref('stg_salaries') }}
+),
+
 sales_employees as (
 
   select
     employees.employee_number,
     employees.first_name,
     employees.last_name,
-    departments.department_name
+    departments.department_name,
+    salary
 
   from employees
+
+  inner join salaries using (employee_number)
 
   inner join dept_emp using (employee_number)
 
