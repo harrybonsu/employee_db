@@ -9,8 +9,22 @@ models:
           - not_null
   - name: stg_departments
     columns:
-      - name: department_name
+      - name: department_number
         tests:
           - accepted_values:
-              values: ['Marketing', 'finance', 'Human_Resources', 'Production', 'Development', 'Quality_Management', 'Research', 'Customer_Service', 'Sales']
-            
+              values: 
+                - d001
+                - d002
+                - d003
+                - d004
+                - d005
+                - d006
+                - d007
+                - d008
+                - d009
+  - name: stg_salaries
+    columns:
+      - name: salary
+        tests:
+          - not_null
+ 
