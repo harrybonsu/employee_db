@@ -14,7 +14,7 @@ departments as (
 ),
 
 salaries as (
-  select * from {{ ref('stg_salaries') }}
+  select * from {{ ref('stg_emp_salaries') }}
 ),
 
 sales_employees as (
