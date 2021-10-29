@@ -5,7 +5,7 @@ with employees as (
     first_name,
     last_name
 
-  from employee_db.public.employees
+  from {{ source('public', 'employees') }}
 
 )
 

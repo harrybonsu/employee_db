@@ -3,7 +3,7 @@ With salaries as (
     emp_no as employee_number,
     salary
     
-  from employee_db.public.salaries
+  from {{ source('public', 'salaries')}}
 )
 
 select * from salaries

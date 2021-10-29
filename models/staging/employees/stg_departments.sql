@@ -4,7 +4,7 @@ with departments as (
         dept_no as department_number,
         dept_name as department_name
 
-    from employee_db.public.departments
+    from {{ source ('public', 'departments') }}
 )
 
 select * from departments

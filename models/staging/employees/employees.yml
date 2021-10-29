@@ -2,8 +2,10 @@ version: 2
 
 models:
   - name: stg_employees
+    description: Contains individual unique employee numbers, employee first and last names
     columns:
       - name: employee_number
+        description: Primary key for stage employees
         tests:
           - unique
           - not_null
